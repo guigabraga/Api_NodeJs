@@ -4,6 +4,10 @@ const testServerController = require('./controllers/testServerController');
 
 const router = express.Router();
 
+router.get('/', (req, res) =>{
+    res.render('home')
+});
+
 router.get('/testrouter', (req, res) => { 
     console.log("router works!");
     res.status(200).send({

@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gradient{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(100deg, black, #130F40);
+    background-size: 300% 300%;
+    animation: backgroundGradient 10s ease infinite;
+}
+
+@keyframes backgroundGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    59% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.font-fa{
+    font-family: 'Courier New', Courier, monospace;
+}
+.text-line{
+    border-right: 2px solid whitesmoke;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.text-animation{
+    animation: cursor 500ms infinite normal, textAnimation 1s steps(10) 3s both;
+}
+
+@keyframes cursor {
+    from{
+        border-right-color: whitesmoke;
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+@keyframes textAnimation {
+    from{
+        width: 0;
+    }
+    to{
+        width: 7em;
+    }
+}
